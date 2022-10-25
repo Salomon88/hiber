@@ -1,0 +1,22 @@
+spring:
+  jpa:
+    show-sql: true
+    properties.hibernate:
+      default_schema: ${DB_SCHEMA:public}
+      show_sql: true
+      format_sql: true
+    hibernate:
+      ddl-auto: create
+  datasource:
+    host: ${DB_HOST:localhost}
+    port: ${DB_PORT:5432}
+    database: ${DB_NAME:test}
+    username: ${DB_USER:postgres}
+    password: ${DB_PASSWORD:admin}
+    url: jdbc:postgresql://${spring.datasource.host}:${spring.datasource.port}/${spring.datasource.database}?autoReconnect=true
+    hikari:
+      maximumPoolSize: 20
+      minimumIdle: 4
+      driverClassName: org.postgresql.Driver
+      jdbcUrl: ${spring.datasource.url}
+      idle-timeout: 300000
