@@ -12,9 +12,9 @@ class HiberApplicationTests {
     @Test
     void test() {
         log.info("##teamcity[testStarted name='HiberApplicationTests']");
-        log.info("##teamcity[testMetadata testName='HiberApplicationTests' name='setUp time' value='+ /usesnpe/UsesRedundant.php:67 WEAK WARNING (int) 'Type cast is redundant'']");
+        log.info("##teamcity[testMetadata testName='HiberApplicationTests' name='setUp time' value='+ /usesnpe/UsesRedundant.php:67 WEAK WARNING (int) Type cast is redundant']");
         log.info("##teamcity[testFailed name='HiberApplicationTests' message='failure message' details='message and stack trace']");
-        log.info("##teamcity[testFinished name='HiberApplicationTests]");
+        log.info("##teamcity[testFinished name='HiberApplicationTests']");
         assertTrue(false);
     }
 
